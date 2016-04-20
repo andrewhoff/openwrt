@@ -39,8 +39,6 @@ define Package/base-files
 endef
 
 define Package/base-files/conffiles
-/etc/config/network
-/etc/config/system
 /etc/hosts
 /etc/inittab
 /etc/group
@@ -53,7 +51,6 @@ define Package/base-files/conffiles
 /etc/sysctl.conf
 /etc/rc.local
 /etc/sysupgrade.conf
-/etc/config/
 /etc/dropbear/
 /etc/crontabs/
 /etc/sysctl.d/local.conf
