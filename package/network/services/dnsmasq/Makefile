@@ -74,7 +74,6 @@ IPset support enabled by default.
 endef
 
 define Package/dnsmasq/conffiles
-/etc/config/dhcp
 /etc/dnsmasq.conf
 endef
 
