@@ -6,5 +6,4 @@
 /etc/profile
 /etc/shadow
 /etc/shells
-/etc/sysctl.conf
 /etc/rc.local

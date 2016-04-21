@@ -52,7 +52,6 @@ endef
 
 define Package/dropbear/conffiles
 /etc/dropbear/dropbear_rsa_host_key
-/etc/config/dropbear 
 endef
 
 define Package/dropbearconvert

@@ -48,7 +48,6 @@ define Package/base-files/conffiles
 /etc/protocols
 /etc/services
 /etc/shells
-/etc/sysctl.conf
 /etc/rc.local
 /etc/sysupgrade.conf
 /etc/dropbear/
