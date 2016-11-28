@@ -106,6 +106,7 @@ define Device/ubnt-unifi
   DEVICE_PROFILE := UBNT UBNTUNIFI
 endef
 
+# default is the LITE for us
 define Device/ubnt-unifiac
   DEVICE_PROFILE := UBNT UBNTUNIFIAC
   IMAGE_SIZE := 15488k
@@ -118,6 +119,10 @@ endef
 define Device/ubnt-unifiac-lite
   $(Device/ubnt-unifiac)
   DEVICE_PROFILE := UBNT UBNTUNIFIACLITE
+  IMAGE_SIZE := 15488k
+  MTDPARTS = spi0.0:384k(u-boot),64k(u-boot-env),15488k(firmware),128k(bs)ro,256k(cfg)ro,64k(EEPROM)ro
+  IMAGES := sysupgrade.bin
+  IMAGE/sysupgrade.bin = append-kernel $$$$(BLOCKSIZE) | append-rootfs | pad-rootfs | check-size $$$$(IMAGE_SIZE)
   BOARDNAME := UBNT-UF-AC-LITE
 endef
 
